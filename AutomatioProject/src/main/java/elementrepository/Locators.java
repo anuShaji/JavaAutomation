@@ -3,6 +3,7 @@ package elementrepository;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebElement;
 
 public class Locators extends Base{
@@ -76,6 +77,24 @@ public void relXPath() {
 public void absXPath() {
 	WebElement abs=driver.findElement(By.xpath("/html/body/section/div/div/div[2]/div[1]/div/div[2]/form/div[1]/input"));
 	WebElement absOne=driver.findElement(By.xpath("/html/body/section/div/div/div[2]/div[2]/div/div[2]/form/button"));
+}
+public void dynamicXPath() {
+	WebElement dyXpath=driver.findElement(By.xpath("//input[contains(@type,'text')]"));//try 3
+}
+public void dynamicTxt() {
+	WebElement dytxt=driver.findElement(By.xpath("//button[(text()='Show Message')]"));
+}
+public void dynamicAxesChild() {
+	WebElement dyChld=driver.findElement(By.xpath("//a[@class='navbar-brand']//child::img[@alt='logo']"));////tagname[@attribute='value']//child::tagname[@type='value']
+}
+public void dynamicAxesParent() {
+	WebElement parentDy=driver.findElement(By.xpath("//button[@id='button-one']//parent::form"));//   //tagname[@attribute='value']//parent::parenttagname
+}
+public void dynamicAxsesFollowing() {
+	WebElement follo=driver.findElement(By.xpath("//button[@id='button-one']//following::div[@id='message-one']"));//  //tagname[@attribute='value']//following::followingtagname[@id='value']
+}
+public void dynamicIndex() {
+	WebElement ind=driver.findElement(By.xpath("(//form[@method='POST'])[2]"));//   (//tagname[@attribute='value'])[index value]
 }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
