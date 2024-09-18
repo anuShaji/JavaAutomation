@@ -10,6 +10,11 @@ public void launchBrowser() {
 	driver.get("https://selenium.qabible.in/index.php");//opens the particular url in the get method
 	driver.manage().window().maximize();//To maximise the window
 }
+public void launchBrowzerForAssignment() {
+	 driver = new ChromeDriver();
+	driver.get("https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
+	driver.manage().window().maximize();
+}
 public void closeQuit() {
 	driver.close();//closes the current webpage
 	driver.quit();//closes all

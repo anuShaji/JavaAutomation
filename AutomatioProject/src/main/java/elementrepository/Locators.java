@@ -85,7 +85,7 @@ public void dynamicTxt() {
 	WebElement dytxt=driver.findElement(By.xpath("//button[(text()='Show Message')]"));
 }
 public void dynamicAxesChild() {
-	WebElement dyChld=driver.findElement(By.xpath("//a[@class='navbar-brand']//child::img[@alt='logo']"));////tagname[@attribute='value']//child::tagname[@type='value']
+	WebElement dyChld = driver.findElement(By.xpath("//a[@class='navbar-brand']//child::img[@alt='logo']"));////tagname[@attribute='value']//child::tagname[@type='value']
 }
 public void dynamicAxesParent() {
 	WebElement parentDy=driver.findElement(By.xpath("//button[@id='button-one']//parent::form"));//   //tagname[@attribute='value']//parent::parenttagname
